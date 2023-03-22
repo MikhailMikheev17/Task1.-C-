@@ -5,3 +5,4 @@ Console.WriteLine(numberA / numberB);
 double numberC = 12; // вещественные числа
 double numberD = 5;
 Console.WriteLine(numberC / numberD);
+
