@@ -24,7 +24,7 @@ int max3 = max(a3,b3,c3);
 
 int maxMax = max(max1,max2,max3);
 
-Console.WriteLine($"max1 = {max1}");
-Console.WriteLine($"max2 = {max2}");
-Console.WriteLine($"max3 = {max3}");
+//Console.WriteLine($"max1 = {max1}");
+//Console.WriteLine($"max2 = {max2}");
+//Console.WriteLine($"max3 = {max3}");
 Console.WriteLine($"mainMax = {maxMax}");
