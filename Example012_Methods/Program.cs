@@ -49,5 +49,15 @@ string Method4(int count, string text)
   return result;
 }
 
-string res = Method4(10,"qwerty ");
-System.Console.WriteLine(res);
+string res = Method4(10, "qwerty ");
+//System.Console.WriteLine(res);
+
+// Вывод таблицы умноения на экран
+for (int i = 2; i <= 10; i++)
+{
+  for (int j = 2; j < 10; j++)
+  {
+    System.Console.WriteLine($"{i} x {j} = {i * j}");
+  }
+  System.Console.WriteLine();
+}
