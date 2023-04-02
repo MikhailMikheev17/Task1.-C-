@@ -57,9 +57,9 @@ for (int i = 2; i <= 10; i++)
 {
   for (int j = 2; j < 10; j++)
   {
-   // System.Console.WriteLine($"{i} x {j} = {i * j}");
+    // System.Console.WriteLine($"{i} x {j} = {i * j}");
   }
- // System.Console.WriteLine();
+  // System.Console.WriteLine();
 }
 
 // ===== Работа с текстом 
@@ -74,12 +74,12 @@ string text = "- Я думаю, - сказал кнзяь, улыбаясь, - �
 //           012
 // s[3] // r
 
-string Replace(string text, char oldValue,char newValue)
+string Replace(string text, char oldValue, char newValue)
 {
   string result = String.Empty;
   int length = text.Length;
-   
-  for (int i = 0; i< length;i++)
+
+  for (int i = 0; i < length; i++)
   {
     if (text[i] == oldValue) result = result + $"{newValue}";
     else result = result + $"{text[i]}";
@@ -88,16 +88,55 @@ string Replace(string text, char oldValue,char newValue)
   return result;
 }
 
-string newText = Replace( text,' ','|');
-System.Console.WriteLine(newText);
-System.Console.WriteLine();
+string newText = Replace(text, ' ', '|');
+//System.Console.WriteLine(newText);
+//System.Console.WriteLine();
 
-newText = Replace( newText,'к','К');
-System.Console.WriteLine(newText);
-System.Console.WriteLine();
+newText = Replace(newText, 'к', 'К');
+//System.Console.WriteLine(newText);
+//System.Console.WriteLine();
 
-newText = Replace( newText,'с','С');
-System.Console.WriteLine(newText);
-System.Console.WriteLine();
+newText = Replace(newText, 'с', 'С');
+//System.Console.WriteLine(newText);
+//System.Console.WriteLine();
+
+//отсортировка массива 
+
+int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
+
+void PrintArray(int[] array)
+{
+  int count = array.Length;
+
+  for (int i = 0; i < count; i++)
+  {
+    System.Console.Write($"{array[i]} ");
+  }
+  System.Console.WriteLine();
+}
+
+void SelectionSort(int[] array)
+{
+  for (int i = 0; i < array.Length - 1; i++)
+  {
+    int minPos = i;
+
+    for (int j = i + 1; j < array.Length; j++)
+    {
+      if (array[j] < array[minPos]) minPos = j;
+    }
+
+    int temporary = array[i];
+    array[i] = array[minPos];
+    array[minPos] = temporary;
+
+  }
+}
+
+PrintArray(arr);
+SelectionSort(arr);
+
+PrintArray(arr);
+
 
 
